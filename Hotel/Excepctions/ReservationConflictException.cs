@@ -12,13 +12,7 @@ namespace Reservoom.Exceptions
     {
         public Reservation ExistingReservation { get; }
         public Reservation IncomingReservation { get; }
-
-        public ReservationConflictException(Reservation existingReservation, Reservation incomingReservation)
-        {
-            ExistingReservation = existingReservation;
-            IncomingReservation = incomingReservation;
-        }
-
+asdasdasdasdasda
         public ReservationConflictException(string message, Reservation existingReservation, Reservation incomingReservation) : base(message)
         {
             ExistingReservation = existingReservation;
