@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Hotel.Commands;
 
 namespace Hotel.ViewModels
 {
@@ -12,11 +13,11 @@ namespace Hotel.ViewModels
         private string _username;
         public string Username
         {
-            get 
+            get
             {
                 return _username;
             }
-            set 
+            set
             {
                 _username = value;
                 OnPropertyChanged(nameof(Username));
@@ -81,5 +82,10 @@ namespace Hotel.ViewModels
 
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
+
+        public MakeReservationViewModel()
+        {
+            SubmitCommand = new MakeReservationCommand();
+        }
     }
 }
